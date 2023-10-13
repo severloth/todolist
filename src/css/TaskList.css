@@ -1,0 +1,78 @@
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Tres columnas iguales */
+    gap: 50px; /* Espacio entre elementos */
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    background-color: #940B92; /* Fondo azul oscuro para las tareas */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    transition: background-color 0.3s;
+    width: 250px;
+    height: auto;
+    word-wrap: break-word;
+  }
+
+
+ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 0;
+    background-color: #ee2853;
+    transition: background-color 0.3s;
+    flex-direction: column;
+    width: 100%;
+    
+
+}
+
+
+ul li span{
+    flex-grow: 1;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+ul li button{
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+    padding: 0; 
+
+}
+
+.saveButton{
+    background-color: #E95793;
+}
+@media (max-width: 768px) {
+    .task-grid {
+      display: block; /* Cambia de grid a bloque para pantallas pequeñas */
+    }
+  
+    .task-item {
+       /* Establece el ancho al 100% para ocupar toda la pantalla */
+      margin-bottom: 20px; /* Aumenta el espacio entre las tareas */
+    }
+  }

@@ -1,38 +1,270 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Pixelify+Sans:wght@400;500&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #610C9F; /* Fondo oscuro para el modo oscuro */
+  color: #fff; /* Texto en modo oscuro */
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  height: 99vh;
+  font-family: 'Pixelify Sans', sans-serif;
+  animation: borderAnimation 2s infinite; /* Aplica la animación al borde */
+
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+ background-color: #EDEDED; /* Fondo blanco para el modo claro */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(108, 108, 108, 0.877);
+  padding: 20px;
+  width: 400px;
+  transition: background-color 0.3s;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+
+
+}
+
+.logo img{
+  
+    width: 100px; /* Establece el ancho del logotipo según tus preferencias */
+    height: auto; /* Mantiene la relación de aspecto */
+    display: flex;
+     
+
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white; /* Violeta */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #d24d6c;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #EDEDED; /* Azul oscuro */
+  color: #fff; /* Texto en el campo de entrada */
+}
+
+button.newButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #940B92; /* Violeta */
+  color: #fff;
+  font-family: 'Pixelify Sans', sans-serif;
+  margin-bottom: 10px;
+  width: 100%;
+  transition: 0.3s;
+
+    
+}
+
+button.newButton:hover{
+  background-color: #E95793; /* Violeta */
+  color: #fff;
+  font-family: 'Pixelify Sans', sans-serif;
+  transition: 0.3s;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 10px 0;
+  background-color: #525c83; /* Azul oscuro */
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+li span {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #fff;
+}
+
+button.edit {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #610C9F; /* Verde */
+  color: #fff;
+ 
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+button.delete {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #d75151; /* Rojo */
+  color: #fff;
+
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+button.complete {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #E95793; /* Verde */
+  color: #fff;
+
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border: 3px solid #E95793; /* Color del borde inicial (azul) */
+    border-style: dotted;
+    transition: 0.5s;
   }
-  to {
-    transform: rotate(360deg);
+  
+  50% {
+    border: 3px solid #DA0C81; /* Color del borde intermedio (verde) */
+    border-style: dashed;
+    transition: 0.5s;
+  }
+  100% {
+    border: 3px solid #940B92; /* Color del borde final (rojo) */
+    border-style: dotted;
+    transition: 0.5s;
+  }
+}
+
+/* Media Queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    align-items: start;
+    height: 100vh;
+    background-color: #610C9F;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(108, 108, 108, 0.877);
+    background-color: #EDEDED;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+
+  button.newButton {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  /* Establece el diseño de las tareas como una lista vertical */
+  ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 0;
+    background-color: #ee2853;
+    transition: background-color 0.3s;
+    flex-direction: column;
+    width: 90%; /* Reduzca el ancho de las tareas en dispositivos móviles */
+  }
+
+  ul li span {
+    flex-grow: 1;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+
+  ul li button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 90%; /* Reduzca el ancho de los botones en dispositivos móviles */
+  }
+}
+
+/* Media Queries para tablets (pantallas medianas) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    height: 100vh;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .main {
+    width: 80%;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  ul li span {
+    font-size: 14px;
   }
 }
